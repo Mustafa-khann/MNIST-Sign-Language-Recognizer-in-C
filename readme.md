@@ -8,6 +8,7 @@ This project is focused on building a neural network from scratch in C to recogn
 
 ## Directory Structure
 
+```
 mnist-sign-language-recognizer/
 ├── src/
 │   ├── main.c
@@ -22,7 +23,7 @@ mnist-sign-language-recognizer/
 │   └── sign_mnist_test.csv
 ├── Makefile
 └── README.md
-
+```
 ### Description of Each Component
 
 1. **`src/` Directory**: Contains all the source code files for the project.
