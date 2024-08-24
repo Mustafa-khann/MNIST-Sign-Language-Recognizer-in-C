@@ -8,7 +8,6 @@ This project is focused on building a neural network from scratch in C to recogn
 
 ## Directory Structure
 
-```plaintext
 mnist-sign-language-recognizer/
 ├── src/
 │   ├── main.c
