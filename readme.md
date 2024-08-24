@@ -1,6 +1,5 @@
 Here is a single snippet of.md code for the provided specification:
 
-```markdown
 # MNIST Sign Language Recognizer
 
 ## Project Overview
@@ -24,7 +23,6 @@ mnist-sign-language-recognizer/
 │   └── sign_mnist_test.csv
 ├── Makefile
 └── README.md
-```
 
 ### Description of Each Component
 
@@ -94,4 +92,3 @@ This will start training the neural network using the training dataset and then 
 ## Conclusion
 
 This project demonstrates a basic but comprehensive implementation of a neural network for image classification using C. By following the steps and exploring the code, you gain a deeper understanding of neural network internals and the challenges of implementing such models from scratch. This is a powerful learning experience for anyone interested in the intersection of machine learning and low-level programming.
-```
