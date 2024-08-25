@@ -4,33 +4,18 @@ Here is a single snippet of.md code for the provided specification:
 
 ## Project Overview
 
-This project is focused on building a neural network from scratch in C to recognize sign language alphabets and digits using the MNIST dataset for sign language. The project involves creating a simple feedforward neural network that can perform image classification tasks, specifically recognizing hand-written sign language characters.
+This project is focused on building a neural network from scratch in C to recognize sign language alphabets and digits using the MNIST dataset for sign language.
 
 ## Directory Structure
 
 ```
-mnist-sign-language-recognizer/
-├── src/
-│   ├── main.c
-│   ├── network.c
-│   ├── network.h
-│   ├── data_loader.c
-│   ├── data_loader.h
-│   ├── matrix.c
-│   └── matrix.h
-├── data/
-│   ├── sign_mnist_train.csv
-│   └── sign_mnist_test.csv
-├── Makefile
-└── README.md
 ```
 ### Description of Each Component
 
 1. **`src/` Directory**: Contains all the source code files for the project.
    - `main.c`: The entry point of the application, which sets up and runs the neural network.
    - `network.c`, `network.h`: Implements the neural network, including forward propagation, backpropagation, and network initialization.
-   - `data_loader.c`, `data_loader.h`: Handles loading and preprocessing of the MNIST sign language dataset.
-   - `matrix.c`, `matrix.h`: Provides matrix operations essential for neural network computations (e.g., matrix multiplication, addition).
+   - `dataLoader.c`, `dataLoader.h`: Handles loading and preprocessing of the MNIST sign language dataset.
 
 2. **`data/` Directory**: Contains the dataset files used for training and testing.
    - `sign_mnist_train.csv`: Training data.
@@ -50,7 +35,7 @@ mnist-sign-language-recognizer/
 
 2. **Install Required Tools**: Make sure you have a C compiler installed (e.g., `gcc`) and `make`.
 
-3. **Download the Dataset**: Place the `sign_mnist_train.csv` and `sign_mnist_test.csv` files into the `data/` directory. These files can be downloaded from Kaggle or any other trusted source that provides the MNIST sign language dataset.
+3. **Download the Dataset**: Place the `sign_mnist_train.csv` and `sign_mnist_test.csv` files into the `dataset/` directory. These files can be downloaded from Kaggle or any other trusted source that provides the MNIST sign language dataset.
 
 4. **Build the Project**: Use the Makefile to compile the project.
 
@@ -71,17 +56,16 @@ This will start training the neural network using the training dataset and then 
 
 ## Understanding the Code
 
-1. **Matrix Operations (`matrix.c`, `matrix.h`)**: Defines functions for creating, freeing, and performing operations on matrices, such as multiplication, addition, subtraction, and applying activation functions.
 
-2. **Neural Network (`network.c`, `network.h`)**:
+1. **Neural Network (`network.c`, `network.h`)**:
    - **Network Creation**: Initializes a neural network with specified layers and sizes.
    - **Forward Propagation**: Implements the forward pass of the neural network, calculating activations.
    - **Backpropagation**: Implements the backward pass, adjusting weights and biases based on errors.
    - **Activation Functions**: Uses the sigmoid function and its derivative for neuron activation and gradient calculations.
 
-3. **Data Loader (`dataLoader.c`, `dataLoader.h`)**: Reads CSV files, normalizes the data, and prepares it for training and testing.
+2. **Data Loader (`dataLoader.c`, `dataLoader.h`)**: Reads CSV files, normalizes the data, and prepares it for training and testing.
 
-4. **Main (`main.c`)**: The driver of the program. It loads the data, initializes the network, runs training for a specified number of epochs, and evaluates the model's performance.
+3. **Main (`main.c`)**: The driver of the program. It loads the data, initializes the network, runs training for a specified number of epochs, and evaluates the model's performance.
 
 ## Next Steps
 
