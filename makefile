@@ -1,2 +1,2 @@
 build:
-	gcc -o mnist_recognizer src/main.c -Iinclude -Llib -lmnist -lm
+gcc -fopenmp src/main.c src/neuralNetwork.c src/utils.c -o sign_language_recognizer -lm
