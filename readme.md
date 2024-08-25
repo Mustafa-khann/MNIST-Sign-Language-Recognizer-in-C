@@ -79,7 +79,7 @@ This will start training the neural network using the training dataset and then 
    - **Backpropagation**: Implements the backward pass, adjusting weights and biases based on errors.
    - **Activation Functions**: Uses the sigmoid function and its derivative for neuron activation and gradient calculations.
 
-3. **Data Loader (`data_loader.c`, `data_loader.h`)**: Reads CSV files, normalizes the data, and prepares it for training and testing.
+3. **Data Loader (`dataLoader.c`, `dataLoader.h`)**: Reads CSV files, normalizes the data, and prepares it for training and testing.
 
 4. **Main (`main.c`)**: The driver of the program. It loads the data, initializes the network, runs training for a specified number of epochs, and evaluates the model's performance.
 
