@@ -72,6 +72,7 @@ After building the project and setting up the dataset, execute the following com
 * **src/**: Contains the source code files.
 * **include/**: Header files defining functions and structures.
 * **data/**: Directory where the MNIST-like dataset should be placed.
+* **bin/**: Compiled binaries.
 * **Makefile**: Script for building the project.
 
 ### Contributing
