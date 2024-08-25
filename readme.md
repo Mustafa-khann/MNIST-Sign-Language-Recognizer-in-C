@@ -1,78 +1,85 @@
-Here is a single snippet of.md code for the provided specification:
+# MNIST Sign Language Recognizer in C
 
-# MNIST Sign Language Recognizer
+Welcome to the **MNIST Sign Language Recognizer in C**! This project utilizes the power of neural networks to recognize American Sign Language (ASL) gestures from images using the MNIST dataset, all implemented in C.
 
-## Project Overview
+## Table of Contents
 
-This project is focused on building a neural network from scratch in C to recognize sign language alphabets and digits using the MNIST dataset for sign language.
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-## Directory Structure
+## Overview
 
-```
-```
-### Description of Each Component
+The MNIST Sign Language Recognizer is a machine learning project that applies a neural network model to identify ASL signs from images. By leveraging the MNIST-like dataset specifically tailored for sign language digits, this project demonstrates how classical machine learning techniques can be implemented efficiently using the C programming language.
 
-1. **`src/` Directory**: Contains all the source code files for the project.
-   - `main.c`: The entry point of the application, which sets up and runs the neural network.
-   - `network.c`, `network.h`: Implements the neural network, including forward propagation, backpropagation, and network initialization.
-   - `dataLoader.c`, `dataLoader.h`: Handles loading and preprocessing of the MNIST sign language dataset.
+## Features
 
-2. **`data/` Directory**: Contains the dataset files used for training and testing.
-   - `sign_mnist_train.csv`: Training data.
-   - `sign_mnist_test.csv`: Testing data.
+- **Neural Network Implementation**: A simple feedforward neural network for image classification.
+- **Handwritten Digit Recognition**: Specially designed for recognizing digits in ASL.
+- **Performance**: Optimized to run efficiently in C, suitable for embedded systems.
+- **Modularity**: Code is organized into modular components for easy understanding and extension.
 
-3. **`Makefile`**: A Makefile for compiling the project using `make` for easy build and execution.
+## Installation
 
-4. **`README.md`**: This file provides a comprehensive guide on how to use and understand the project.
+### Prerequisites
 
-## Setting Up the Project
+- C compiler (e.g., `gcc`)
+- Make utility (`make`)
+- Git (for cloning the repository)
 
-1. **Clone the Repository**: First, clone the repository to your local machine.
+### Steps
 
-   ```bash
-   git clone https://github.com/mustafa-khann/mnist-sign-language-recognizer.git
-   ```
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/Mustafa-khann/MNIST-Sign-Language-Recognizer-in-C.git
+    cd MNIST-Sign-Language-Recognizer-in-C
+    ```
 
-2. **Install Required Tools**: Make sure you have a C compiler installed (e.g., `gcc`) and `make`.
+2. **Build the project**:
+    ```bash
+    make
+    ```
 
-3. **Download the Dataset**: Place the `sign_mnist_train.csv` and `sign_mnist_test.csv` files into the `dataset/` directory. These files can be downloaded from Kaggle or any other trusted source that provides the MNIST sign language dataset.
+3. **Download the Dataset**: Place the MNIST-like sign language dataset in the `data/` directory. Ensure the data is in the correct format as expected by the codebase.
 
-4. **Build the Project**: Use the Makefile to compile the project.
+## Usage
 
-   ```bash
-   cd mnist-sign-language-recognizer
-   make
-   ```
-
-## Running the Project
-
-After building the project, you can run the executable to train and test the neural network:
+Once the project is built and the dataset is in place, you can run the recognizer with:
 
 ```bash
-./mnist-sign-language-recognizer
+./sign_language_recognizer
 ```
 
-This will start training the neural network using the training dataset and then evaluate its performance on the testing dataset.
+### Options
+* Modify the source code to adjust parameters such as learning rate, number of epochs, etc.
+* The current implementation uses a simple neural network architecture; feel free to expand and experiment with different models.
 
-## Understanding the Code
+### Project Structure
+* **src/**: Contains the source code files.
+* **include/**: Header files defining functions and structures.
+* **data/**: Directory where the MNIST-like dataset should be placed.
+* **bin/**: Compiled binaries.
+* **Makefile**: Script for building the project.
 
+### Contributing
+Contributions are welcome! If you have ideas to improve the project, whether through optimizing the existing code or adding new features, feel free to fork the repository and submit a pull request. Please ensure your contributions align with the overall project goals and adhere to the existing coding style.
 
-1. **Neural Network (`network.c`, `network.h`)**:
-   - **Network Creation**: Initializes a neural network with specified layers and sizes.
-   - **Forward Propagation**: Implements the forward pass of the neural network, calculating activations.
-   - **Backpropagation**: Implements the backward pass, adjusting weights and biases based on errors.
-   - **Activation Functions**: Uses the sigmoid function and its derivative for neuron activation and gradient calculations.
+### Steps to Contribute
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-branch-name`
+3. Make your changes.
+4. Commit your changes: `git commit -m 'Description of changes'`
+5. Push to the branch: `git push origin feature-branch-name`
+6. Open a pull request.
 
-2. **Data Loader (`dataLoader.c`, `dataLoader.h`)**: Reads CSV files, normalizes the data, and prepares it for training and testing.
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-3. **Main (`main.c`)**: The driver of the program. It loads the data, initializes the network, runs training for a specified number of epochs, and evaluates the model's performance.
-
-## Next Steps
-
-- **Optimize Backpropagation**: Enhance the backpropagation implementation for better performance and accuracy.
-- **Implement Additional Features**: Add more sophisticated features like different activation functions, more layers, dropout, etc.
-- **Refactor Code**: Organize the codebase for better modularity and maintainability.
-
-## Conclusion
-
-This project demonstrates a basic but comprehensive implementation of a neural network for image classification using C. By following the steps and exploring the code, you gain a deeper understanding of neural network internals and the challenges of implementing such models from scratch. This is a powerful learning experience for anyone interested in the intersection of machine learning and low-level programming.
+### Acknowledgements
+* **MNIST Dataset**: Thanks to Yann LeCun and others who have made the MNIST dataset widely available for educational and research purposes.
+* **Inspiration**: This project was inspired by the need to make machine learning accessible and understandable through a practical application in C.

@@ -130,7 +130,7 @@ void forwardPropagation(NeuralNetwork *nn, double *input, double *hiddenLayer, d
 }
 
 void backwardPropagation(NeuralNetwork *nn, double *input, double *hiddenLayer, double *outputLayer, int label, double learningRate) {
-    double outputError[34] = {0};
+    double outputError[37] = {0};
     double hiddenError[128];
 
     #pragma omp parallel

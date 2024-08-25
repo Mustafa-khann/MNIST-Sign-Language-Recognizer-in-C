@@ -10,7 +10,7 @@
 #define TEST_SAMPLES 7172
 #define INPUT_SIZE 784
 #define HIDDEN_SIZE 128
-#define OUTPUT_SIZE 34
+#define OUTPUT_SIZE 24
 #define EPOCHS 10
 #define LEARNING_RATE 0.005
 
