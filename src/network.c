@@ -46,7 +46,8 @@ NeuralNetwork* createNeuralNetwork(int inputSize, int hiddenSize, int outputSize
 
     for (int i = 0; i < inputSize; i++) {
         nn->hiddenWeights[i] = (double *)malloc(hiddenSize * sizeof(double));
-        if (nn->hiddenWeights[i] == NULL) {
+        if (nn->hiddenWeights[i] == NULL)
+        {
             for (int j = 0; j < i; j++) free(nn->hiddenWeights[j]);
             free(nn->hiddenWeights);
             free(nn);
