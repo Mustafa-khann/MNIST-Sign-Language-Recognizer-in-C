@@ -130,7 +130,7 @@ void forwardPropagation(NeuralNetwork *nn, double *input, double *hiddenLayer, d
 }
 
 void backwardPropagation(NeuralNetwork *nn, double *input, double *hiddenLayer, double *outputLayer, int label, double learningRate) {
-    double outputError[37] = {0};
+    double outputError[24] = {0};
     double hiddenError[128];
 
     #pragma omp parallel
@@ -182,7 +182,7 @@ void trainNetwork(NeuralNetwork *nn, double **trainingData, int *labels, int num
         #pragma omp parallel reduction(+:totalLoss)
         {
             double hiddenLayer[128];
-            double outputLayer[37];
+            double outputLayer[24];
 
             #pragma omp for
             for (int i = 0; i < numSamples; i++) {

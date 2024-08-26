@@ -7,11 +7,11 @@
 #include <omp.h>
 
 #define TRAINING_SAMPLES 27455
-#define TEST_SAMPLES 7172
+#define TEST_SAMPLES 7000
 #define INPUT_SIZE 784
 #define HIDDEN_SIZE 128
 #define OUTPUT_SIZE 24
-#define EPOCHS 10
+#define EPOCHS 20
 #define LEARNING_RATE 0.005
 
 double calculateAccuracy(NeuralNetwork *nn, double **images, int *labels, int numSamples) {
